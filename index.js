@@ -11,7 +11,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.once(Events.ClientReady, (cli) => {
   console.log(`Ready! Logged in as ${cli.user.tag}`);
   schedule_dates.forEach((date) => {
-    cron.schedule(`45 ${date.minutes} ${date.hour} * * ${date.day}`, () => {
+    // cron.schedule(`0 ${date.minutes} ${date.hour} * * ${date.day}`, () => {
+    cron.schedule(`0 * * * * *`, () => {
       const gif_obj = getRandomGif();
       const embed = createEmbed(gif_obj.gif_name);
       cli.channels.fetch(process.env["CHANNEL_ID"]).then((channel) => {
