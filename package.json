@@ -1,0 +1,27 @@
+{
+  "name": "milereminder",
+  "version": "1.0.0",
+  "description": "Discord bot that sends scheduled reminders for running sessions and verifies completion.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "echo 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abel-Lr/MileReminder.git"
+  },
+  "author": "Abel-Lr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abel-Lr/MileReminder/issues"
+  },
+  "homepage": "https://github.com/Abel-Lr/MileReminder#readme",
+  "dependencies": {
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "node-cron": "^4.2.1"
+  }
+}
