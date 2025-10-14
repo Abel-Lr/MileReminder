@@ -13,7 +13,7 @@ client.once(Events.ClientReady, (cli) => {
   schedule_dates.forEach((date) => {
     // cron.schedule(`0 ${date.minutes} ${date.hour} * * ${date.day}`, () => {
     cron.schedule(`0 * * * * *`, async () => {
-      const gif_obj = getRandomGif();
+      const gif_obj = await getRandomGif();
       const embed = createEmbed(gif_obj.gif_name);
       const channel = await cli.channels.fetch(process.env["CHANNEL_ID"]);
       try {
