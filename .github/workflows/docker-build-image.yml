@@ -28,3 +28,4 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/abel-lr/milereminder:latest
+          build-args: TZ=${{ secrets.TZ }}
